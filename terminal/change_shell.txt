@@ -1,0 +1,12 @@
+This is the form for change of the shell
+in the terminal, por si lo necesitamos.
+
+$ chsh -s $(which bash)  # si queremos cambiarlo a bash
+$ chsh -s $(which zsh)   # si queremos cambiarlo a zsh
+
+Despues debemos reiniciar o apagar y volverla a encender para que los cambios
+hagan efectos.
+
+Si la shell no se cambia debemos editar el archivo /etc/pam.d/chsh
+y comentar la linea (de esta manera):
+# auth required pam_shells.so

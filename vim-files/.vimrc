@@ -63,29 +63,29 @@ set updatetime=300
 syntax on
 
 " swap, backup and undo file
-set directory=~/.vim/dirs/tmp " folder for swap files
-set backup                    " make backup files
-set backupdir=~/.vim/dirs/backups " folder for backup files
-set undofile                  " presistent undos - undo after you are open the file
-set undodir=!~/.vim/dirs/undos
-set viminfo+=n~/.vim/dirs/viminfo " if you exit vim and later start, vim remembers information like, command line history and searchs..."
+"set directory=~/.vim/dirs/tmp " folder for swap files
+"set backup                    " make backup files
+"set backupdir=~/.vim/dirs/backups " folder for backup files
+"set undofile                  " presistent undos - undo after you are open the file
+"set undodir=!~/.vim/dirs/undos
+"set viminfo+=n~/.vim/dirs/viminfo " if you exit vim and later start, vim remembers information like, command line history and searchs..."
 
-" create nedded directories if they don't exist
-if !isdirectory(&backupdir)
-  call mkdir(&backupdir, 'p')
+"" create nedded directories if they don't exist
+"if !isdirectory(&backupdir)
+  "call mkdir(&backupdir, 'p')
 
-endif
+"endif
 
-if !isdirectory(&directory)
-  call mkdir(&directory, 'p')
+"if !isdirectory(&directory)
+  "call mkdir(&directory, 'p')
 
-endif
+"endif
 
 
-if !isdirectory(&undodir)
-  call mkdir(&undodir, 'p')
+"if !isdirectory(&undodir)
+  "call mkdir(&undodir, 'p')
 
-endif
+"endif
 
 " tabs and spaces handling
 set tabstop=2
