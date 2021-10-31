@@ -1,0 +1,151 @@
+" This file have the plugins configuration
+
+"Using vim-plug
+call plug#begin("~/.vim/plugged")
+
+" Autocompletacion
+"Plug 'davidhalter/jedi-vim', {'for': 'python'}
+"Plug 'vim-scripts/AutoComplPop'
+
+" Python
+Plug 'python-mode/python-mode', {'for': 'python', 'branch': 'develop'}
+
+" This plugin is for resaltado of syntax
+Plug 'sheerun/vim-polyglot'
+
+" Syntactic analysis
+Plug 'scrooloose/syntastic'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'ctrlpvim/ctrlp.vim'
+" Run test
+"Plug 'janko-m/vim-test', {'for': ['python']}
+"Plug 'tpope/vim-dispatch'
+
+" Code snippets
+"Plug 'SirVer/ultisnips'
+
+" File browser
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+
+" Change cursor in Insert and Replace
+Plug 'wincent/terminus'
+
+" Color Scheme
+Plug 'chriskempson/base16-vim'
+
+" Code comenter
+Plug 'scrooloose/nerdcommenter'
+
+Plug 'Valloric/YouCompleteMe'
+
+" Better motion
+Plug 'easymotion/vim-easymotion'
+
+" Code and file fuzzy finder
+"Plug 'junegunn/fzf', {'dir':'~/.fzf', 'do': './install --all'}
+"Plug 'junegunn/fzf.vim'
+
+" Ack code search (requires ack or ag installed in teh system)
+" este plugin quizas nos dara error por que hay que instalar este programa de terminal
+"Plug 'mileszs/ack.vim'
+
+" Git integartion
+"Plug 'tpope/vim-fugitive'
+"Plug 'airblade/vim-gitgutter'
+
+" Surround
+"Plug 'tpope/vim-surround'
+
+" Override configs by directory
+" We can create a .vim.custom file in the directory you want to 
+" customize
+"Plug 'arielrossanigo/dir-configs-override.vim'
+
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+
+Plug 'mattn/emmet-vim'
+
+call plug#end()
+
+" ====================================
+" Plugins configuration
+" ====================================
+
+"" Airline ---------------------------------------
+"if !exists('g:airline_symbols')
+  "let g:airline_symbols = {}
+"endif
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
+""" aki podemos poder los simbolos que queremos que muestre, creo que esta mala asi posiblemente dara algun error
+""" si da algun error, buscamos en la web esta configuracion
+"let g:airline_symbols.branch = '/'
+"let g:airline_symbols.paste = 'p'
+"let g:airline_symbols.whitespace = '||'
+
+" Syntastic ------------------------------------
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_python_checkers = ['flake8', 'mypy']
+"let g:syntastic_python_flake8_post_args='--ignore=E501,D100,D101,D102,D103'
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 0
+"let g:syntastic_check_on_open = 0
+"let g:syntastic_check_on_wq = 0
+
+" Tagbar ------------------------------------
+"let g:tagbar_compat = 1
+"let g:tagbar_sort = 1
+"let g:tagbar_autoclose = 1
+"let g:tagbar_foldlevel = 0
+"let g:tagbar_width = 60
+"" Open tagbar
+"nnoremap <leader>t :TagbarToggle<CR>
+
+" Vim tests ------------------------------------
+"let g:test#strategy = "vimterminal"
+
+"nmap <silent> <leader>rt :TestNearest<CR>
+"nmap <silent> <leader>rT :TestFile<CR>
+"nmap <silent> <leader>ra :TestSuite<CR>
+"nmap <silent> <leader>rl :TestLast<CR>
+"nmap <silent> <leader>rg :TestVisit<CR>
+
+"Ultisnipt ---------------------------------
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackTrigger="<c-z>"
+"let g:UltiSnipsEditSplit="vertical"
+
+" Execute this command for install the indent line plugin in vim
+"git clone https://github.com/Yggdroot/indentLine.git ~/.vim/pack/vendor/start/indentLine
+"vim -u NONE -c "helptags  ~/.vim/pack/vendor/start/indentLine/doc" -c "q"
+
+
+" Indent Lines Configuration
+let g:indentLine_setColors = 0
+let g:indentLine_color_term = 239
+let g:indentLine_bgcolor_term = 202
+let g:indentLine_bgcolor_gui = '#FF5F00'
+let g:indentLine_char = '|'
+let g:indentLine_defaultGroup = 'SpecialKey'
+
+" Explorer Files Vim
+let g:netrw_banner=0
+nmap <leader>b I
+let g:netrw_liststyle=3
+let g:netrw_winzise=0
+let g:netrw_preview=1
+
+" Python Mode Settings
+let g:ycm_show_diagnostics_ui = 0
+
+"Indent line configuration
+let g:indentLine_setColors = 0
+let g:indentLine_color_term = 239
+let g:indentLine_bgcolor_term = 202
+let g:indentLine_bgcolor_gui = '#FF5F00'
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
