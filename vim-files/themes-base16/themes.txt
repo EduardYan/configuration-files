@@ -1,0 +1,34 @@
+Algunos temas de base16 muy buenos y que ami me han gustado mucho son
+(los colores varian al usar tmux (multiplexor de terminales)), pero aun asi son buenos jeje.
+
+este es el de dracula jeje
+colorscheme base16-dracula
+
+colorscheme base16-brewer
+
+Este ta chivo jeje
+colorscheme base16-atlas
+
+colorscheme base16-atelier-plateau
+
+colorscheme base16-darktooth
+
+colorscheme base16-ia-dark
+
+colorscheme base16-irblack
+
+Este esta chivo tambien
+colorscheme base16-codeschool
+
+colorscheme base16-gruvbox-dark-hard
+
+colorscheme base16-paraiso
+
+Este se parece al de Fazt (creo que es mi favorito) jaja
+colorscheme base16-outrun-dark
+
+Este es super chivo porque es verde
+colorscheme base16-apathy
+
+Este es uno chivo por defecto de VIM
+colorscheme delek
