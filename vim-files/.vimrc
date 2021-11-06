@@ -1,6 +1,6 @@
 "Others file of the configuration
-so ~/.vim/maps.vim
 so ~/.vim/plugins.vim
+so ~/.vim/maps.vim
 
 set encoding=utf-8
 

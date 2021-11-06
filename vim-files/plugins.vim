@@ -4,7 +4,7 @@
 call plug#begin("~/.vim/plugged")
 
 " Autocompletacion
-"Plug 'davidhalter/jedi-vim', {'for': 'python'}
+Plug 'davidhalter/jedi-vim', {'for': 'python'}
 "Plug 'vim-scripts/AutoComplPop'
 
 " Python
@@ -16,7 +16,7 @@ Plug 'sheerun/vim-polyglot'
 " Syntactic analysis
 Plug 'scrooloose/syntastic'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'ctrlpvim/ctrlp.vim'
 " Run test
@@ -24,7 +24,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'tpope/vim-dispatch'
 
 " Code snippets
-"Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips', {'for': ['sh', 'python', 'markdown']}
+Plug 'honza/vim-snippets', {'for': ['sh', 'python', 'markdown']}
+Plug 'ervandew/supertab'
 
 " File browser
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
@@ -149,3 +151,5 @@ let g:indentLine_color_term = 239
 let g:indentLine_bgcolor_term = 202
 let g:indentLine_bgcolor_gui = '#FF5F00'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+let g:coc_disable_startup_warning = 1

@@ -94,10 +94,13 @@ set completeopt=longest,menuone
 set completeopt-=preview
 set omnifunc=syntaxcomplete#Complete
 
+" this is for the portapapeles
+set clipboard=unnamedplus
+
 " this is for execute code for python
 " Bind F5 to save file if modified and execute python script in a buffer.
-nnoremap <silent> <leader>r :call SaveAndExecutePython()<CR>
-vnoremap <silent> <leader>r :<C-u>call SaveAndExecutePython()<CR>
+nnoremap <silent> <leader>l :call SaveAndExecutePython()<CR>
+vnoremap <silent> <leader>l :<C-u>call SaveAndExecutePython()<CR>
 
 function! SaveAndExecutePython()
     " SOURCE [reusable window]: https://github.com/fatih/vim-go/blob/master/autoload/go/ui.vim
@@ -179,3 +182,19 @@ function! NERDTreeRefresh()
 endfunction
 
 autocmd BufEnter * call NERDTreeRefresh()
+
+noremap <Leader>y "*y
+noremap <leader>p "*p
+noremap <leader>y "+y
+noremap <leader>p "+p
+
+let g:SuperTabDefaultCompletionType    = '<C-n>'
+let g:SuperTabCrMapping                = 0
+let g:UltiSnipsExpandTrigger           = '<tab>'
+let g:UltiSnipsJumpForwardTrigger      = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
+let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsListSnippets="<c-t>"
