@@ -4,11 +4,16 @@
 call plug#begin("~/.vim/plugged")
 
 " Autocompletacion
-Plug 'davidhalter/jedi-vim', {'for': 'python'}
+"Plug 'davidhalter/jedi-vim', {'for': 'python'}
+
+" Work with Python
+Plug 'python-mode/python-mode', {'for': 'python', 'branch': 'develop'}
+
 "Plug 'vim-scripts/AutoComplPop'
 
-" Python
-Plug 'python-mode/python-mode', {'for': 'python', 'branch': 'develop'}
+Plug 'preservim/tagbar'
+
+Plug 'jiangmiao/auto-pairs'
 
 " This plugin is for resaltado of syntax
 Plug 'sheerun/vim-polyglot'
@@ -16,7 +21,7 @@ Plug 'sheerun/vim-polyglot'
 " Syntactic analysis
 Plug 'scrooloose/syntastic'
 
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'ctrlpvim/ctrlp.vim'
 " Run test
@@ -92,21 +97,12 @@ call plug#end()
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
-"let g:syntastic_python_checkers = ['flake8', 'mypy']
-"let g:syntastic_python_flake8_post_args='--ignore=E501,D100,D101,D102,D103'
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 0
-"let g:syntastic_check_on_open = 0
-"let g:syntastic_check_on_wq = 0
-
-" Tagbar ------------------------------------
-"let g:tagbar_compat = 1
-"let g:tagbar_sort = 1
-"let g:tagbar_autoclose = 1
-"let g:tagbar_foldlevel = 0
-"let g:tagbar_width = 60
-"" Open tagbar
-"nnoremap <leader>t :TagbarToggle<CR>
+let g:syntastic_python_checkers = ['flake8', 'mypy']
+let g:syntastic_python_flake8_post_args='--ignore=E501,D100,D101,D102,D103'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
 
 " Vim tests ------------------------------------
 "let g:test#strategy = "vimterminal"
@@ -116,11 +112,6 @@ call plug#end()
 "nmap <silent> <leader>ra :TestSuite<CR>
 "nmap <silent> <leader>rl :TestLast<CR>
 "nmap <silent> <leader>rg :TestVisit<CR>
-
-"Ultisnipt ---------------------------------
-"let g:UltiSnipsJumpForwardTrigger="<c-b>"
-"let g:UltiSnipsJumpBackTrigger="<c-z>"
-"let g:UltiSnipsEditSplit="vertical"
 
 " Execute this command for install the indent line plugin in vim
 "git clone https://github.com/Yggdroot/indentLine.git ~/.vim/pack/vendor/start/indentLine
@@ -135,21 +126,15 @@ let g:indentLine_bgcolor_gui = '#FF5F00'
 let g:indentLine_char = '|'
 let g:indentLine_defaultGroup = 'SpecialKey'
 
-" Explorer Files Vim
-let g:netrw_banner=0
-nmap <leader>b I
-let g:netrw_liststyle=3
-let g:netrw_winzise=0
-let g:netrw_preview=1
-
 " Python Mode Settings
 let g:ycm_show_diagnostics_ui = 0
 
-"Indent line configuration
+" Indent line configuration
 let g:indentLine_setColors = 0
 let g:indentLine_color_term = 239
 let g:indentLine_bgcolor_term = 202
 let g:indentLine_bgcolor_gui = '#FF5F00'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
+" for that coc not show a message in error case
 let g:coc_disable_startup_warning = 1

@@ -1,6 +1,4 @@
 "Others file of the configuration
-so ~/.vim/plugins.vim
-so ~/.vim/maps.vim
 
 set encoding=utf-8
 
@@ -31,6 +29,9 @@ if vim_plug_just_installed
   :PlugInstall
 
 endif
+
+so ~/.vim/plugins.vim
+so ~/.vim/maps.vim
 
 " no vi compatible
 set nocompatible
@@ -139,7 +140,9 @@ set background=dark
 "este tema esta bien chivo
 "colorscheme base16-apathy
 "colorscheme base16-oceanicnext
-colorscheme base16-gruvbox-dark-hard
+"colorscheme base16-gruvbox-dark-hard
+colorscheme base16-tomorrow-night
+
 set t_Co=256
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"

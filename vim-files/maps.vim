@@ -20,8 +20,8 @@ inoremap <F1> <nop>
 nnoremap <F2> <esc>:w!<CR>
 inoremap <F2> <esc>:w!<CR>
 vnoremap <F2> <esc>:w!<CR>
-noremap <leader>s <esc>:w!<CR>
-inoremap <leader>s <esc>:w!<CR>
+nnoremap <leader>s <esc>:w!<CR>
+"inoremap <leader>s <esc>:w!<CR>
 vnoremap <leader>s <esc>:w!<CR>
 
 " tab navigation mappings
@@ -79,13 +79,13 @@ nnoremap gn ;
 autocmd BufWritePre *.py :%s/\s\+$//e
 
 " autocomplete marchs
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
-inoremap { {}<Esc>i
-inoremap < <><Esc>i
-inoremap ` ``<Esc>i
+"inoremap ' ''<Esc>i
+"inoremap " ""<Esc>i
+"inoremap ( ()<Esc>i
+"inoremap [ []<Esc>i
+"inoremap { {}<Esc>i
+"inoremap < <><Esc>i
+"inoremap ` ``<Esc>i
 
 
 " ???
@@ -99,8 +99,8 @@ set clipboard=unnamedplus
 
 " this is for execute code for python
 " Bind F5 to save file if modified and execute python script in a buffer.
-nnoremap <silent> <leader>l :call SaveAndExecutePython()<CR>
-vnoremap <silent> <leader>l :<C-u>call SaveAndExecutePython()<CR>
+nnoremap <silent> <leader>w :call SaveAndExecutePython()<CR>
+vnoremap <silent> <leader>w :<C-u>call SaveAndExecutePython()<CR>
 
 function! SaveAndExecutePython()
     " SOURCE [reusable window]: https://github.com/fatih/vim-go/blob/master/autoload/go/ui.vim
@@ -183,11 +183,6 @@ endfunction
 
 autocmd BufEnter * call NERDTreeRefresh()
 
-noremap <Leader>y "*y
-noremap <leader>p "*p
-noremap <leader>y "+y
-noremap <leader>p "+p
-
 let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:SuperTabCrMapping                = 0
 let g:UltiSnipsExpandTrigger           = '<tab>'
@@ -198,3 +193,20 @@ let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
 
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsListSnippets="<c-t>"
+
+" Explorer Files Vim
+let g:netrw_banner=0
+nmap <leader>b I
+let g:netrw_liststyle=3
+let g:netrw_winzise=0
+let g:netrw_preview=1
+
+" Tagbar ------------------------------------
+let g:tagbar_compat = 1
+let g:tagbar_sort = 1
+let g:tagbar_autoclose = 1
+let g:tagbar_foldlevel = 0
+let g:tagbar_width = 60
+" Open tagbar
+nnoremap <leader>t :TagbarToggle<CR>
+
