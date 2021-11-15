@@ -23,6 +23,7 @@ vnoremap <F2> <esc>:w!<CR>
 nnoremap <leader>s <esc>:w!<CR>
 "inoremap <leader>s <esc>:w!<CR>
 vnoremap <leader>s <esc>:w!<CR>
+nnoremap <leader>f <esc>:w<CR>
 
 " tab navigation mappings
 nnoremap tn :tabn<CR>
@@ -201,12 +202,12 @@ let g:netrw_liststyle=3
 let g:netrw_winzise=0
 let g:netrw_preview=1
 
-" Tagbar ------------------------------------
-let g:tagbar_compat = 1
-let g:tagbar_sort = 1
-let g:tagbar_autoclose = 1
-let g:tagbar_foldlevel = 0
-let g:tagbar_width = 60
-" Open tagbar
-nnoremap <leader>t :TagbarToggle<CR>
+"" Tagbar ------------------------------------
+"let g:tagbar_compat = 1
+"let g:tagbar_sort = 1
+"let g:tagbar_autoclose = 1
+"let g:tagbar_foldlevel = 0
+"let g:tagbar_width = 60
+"" Open tagbar
+"nnoremap <leader>t :TagbarToggle<CR>
 

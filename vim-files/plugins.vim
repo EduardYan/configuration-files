@@ -4,14 +4,14 @@
 call plug#begin("~/.vim/plugged")
 
 " Autocompletacion
-"Plug 'davidhalter/jedi-vim', {'for': 'python'}
+Plug 'davidhalter/jedi-vim', {'for': 'python'}
 
 " Work with Python
 Plug 'python-mode/python-mode', {'for': 'python', 'branch': 'develop'}
 
 "Plug 'vim-scripts/AutoComplPop'
 
-Plug 'preservim/tagbar'
+"Plug 'preservim/tagbar'
 
 Plug 'jiangmiao/auto-pairs'
 
@@ -129,12 +129,16 @@ let g:indentLine_defaultGroup = 'SpecialKey'
 " Python Mode Settings
 let g:ycm_show_diagnostics_ui = 0
 
-" Indent line configuration
-let g:indentLine_setColors = 0
-let g:indentLine_color_term = 239
-let g:indentLine_bgcolor_term = 202
-let g:indentLine_bgcolor_gui = '#FF5F00'
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-
 " for that coc not show a message in error case
 let g:coc_disable_startup_warning = 1
+
+nnoremap <silent> <leader>a <Esc>:PymodeRun<CR>
+
+" Jedi vim configuration
+"let g:jedi#auto_initialization = 0
+"let g:jedi#auto_vim_configuration = 0
+let g:jedi#use_tabs_not_buffers = 1
+"let g:jedi#popup_on_dot = 0
+"let g:jedi#popup_select_first = 0
+
+autocmd FileType python setlocal completeopt-=preview

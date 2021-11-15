@@ -88,10 +88,10 @@ if !isdirectory(&undodir)
 endif
 
 " tabs and spaces handling
-set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+set expandtab
 
 " show
 set ruler
@@ -141,7 +141,8 @@ set background=dark
 "colorscheme base16-apathy
 "colorscheme base16-oceanicnext
 "colorscheme base16-gruvbox-dark-hard
-colorscheme base16-tomorrow-night
+"colorscheme base16-tomorrow-night
+"colorscheme base16-irblack
 
 set t_Co=256
 if exists('+termguicolors')
