@@ -1,6 +1,6 @@
 " This file have the plugins configuration
 
-"Using vim-plug
+" Using vim-plug
 call plug#begin("~/.vim/plugged")
 
 " Autocompletacion
@@ -13,6 +13,7 @@ Plug 'python-mode/python-mode', {'for': 'python', 'branch': 'develop'}
 
 "Plug 'preservim/tagbar'
 
+" Close brackets and more
 Plug 'jiangmiao/auto-pairs'
 
 " This plugin is for resaltado of syntax
@@ -21,9 +22,10 @@ Plug 'sheerun/vim-polyglot'
 " Syntactic analysis
 Plug 'scrooloose/syntastic'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'ctrlpvim/ctrlp.vim'
+
 " Run test
 "Plug 'janko-m/vim-test', {'for': ['python']}
 "Plug 'tpope/vim-dispatch'
@@ -34,7 +36,7 @@ Plug 'honza/vim-snippets', {'for': ['sh', 'python', 'markdown']}
 Plug 'ervandew/supertab'
 
 " File browser
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+" Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 
 " Change cursor in Insert and Replace
 Plug 'wincent/terminus'
@@ -45,10 +47,11 @@ Plug 'chriskempson/base16-vim'
 " Code comenter
 Plug 'scrooloose/nerdcommenter'
 
-Plug 'Valloric/YouCompleteMe'
+" You complete me server
+" Plug 'Valloric/YouCompleteMe'
 
 " Better motion
-Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
 
 " Code and file fuzzy finder
 "Plug 'junegunn/fzf', {'dir':'~/.fzf', 'do': './install --all'}
@@ -132,7 +135,6 @@ let g:ycm_show_diagnostics_ui = 0
 " for that coc not show a message in error case
 let g:coc_disable_startup_warning = 1
 
-nnoremap <silent> <leader>a <Esc>:PymodeRun<CR>
 
 " Jedi vim configuration
 "let g:jedi#auto_initialization = 0

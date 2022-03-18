@@ -30,8 +30,37 @@ if vim_plug_just_installed
 
 endif
 
+
+" Source files for plugins and mapping
 so ~/.vim/plugins.vim
 so ~/.vim/maps.vim
+
+
+call plug#begin()
+
+
+" Autocompletacion
+Plug 'davidhalter/jedi-vim', {'for': 'python'}
+
+" Work with Python
+Plug 'python-mode/python-mode', {'for': 'python', 'branch': 'develop'}
+
+" Autocomplete
+Plug 'jiangmiao/auto-pairs'
+
+" Code snippets
+Plug 'SirVer/ultisnips', {'for': ['sh', 'python', 'markdown','javascript']}
+Plug 'honza/vim-snippets', {'for': ['sh', 'python', 'markdown', 'javascript']}
+Plug 'ervandew/supertab'
+
+" Color Scheme
+Plug 'chriskempson/base16-vim'
+
+" Emmet for HMTL
+Plug 'mattn/emmet-vim'
+
+
+call plug#end()
 
 " no vi compatible
 set nocompatible
@@ -138,7 +167,7 @@ set background=dark
 "colorscheme desert
 "colorscheme base16-atelier-seaside
 "este tema esta bien chivo
-"colorscheme base16-apathy
+colorscheme base16-apathy
 "colorscheme base16-oceanicnext
 "colorscheme base16-gruvbox-dark-hard
 "colorscheme base16-tomorrow-night

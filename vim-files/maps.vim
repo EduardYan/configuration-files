@@ -101,7 +101,6 @@ set clipboard=unnamedplus
 " this is for execute code for python
 " Bind F5 to save file if modified and execute python script in a buffer.
 nnoremap <silent> <leader>w :call SaveAndExecutePython()<CR>
-vnoremap <silent> <leader>w :<C-u>call SaveAndExecutePython()<CR>
 
 function! SaveAndExecutePython()
     " SOURCE [reusable window]: https://github.com/fatih/vim-go/blob/master/autoload/go/ui.vim
@@ -156,7 +155,7 @@ function! SaveAndExecutePython()
     setlocal nomodifiable
 endfunction
 
-"this is for execute a file .js with node
+" this is for execute a file .js with node
 nmap <leader>n :! node %
 map <F7> :q <CR>
 
@@ -166,23 +165,23 @@ map <leader>y :w !python3<CR>
 
 " NERDTree -------------------------------
 " toggle nertree display
-map <F3> :NERDTreeToggle<CR>
-"" toggle nerdtree with the current file selected
-nmap <F4> :NERDTreeFind<CR>
-"" dont show this files
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '__pycache__']
-"" show cursor line
-let NERDTreeHighlightCursorline = 1
+" map <F3> :NERDTreeToggle<CR>
+" toggle nerdtree with the current file selected
+" nmap <F4> :NERDTreeFind<CR>
+" dont show this files
+" let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '__pycache__']
+" show cursor line
+" let NERDTreeHighlightCursorline = 1
 
-"" Autorefresh on tree focus
-function! NERDTreeRefresh()
-  if &filetype == "nerdtree"
-    silent exe substitute(mapcheck("R"), "<CR>", "", "")
+" Autorefresh on tree focus
+" function! NERDTreeRefresh()
+  " if &filetype == "nerdtree"
+    " silent exe substitute(mapcheck("R"), "<CR>", "", "")
 
-  endif
-endfunction
+  " endif
+" endfunction
 
-autocmd BufEnter * call NERDTreeRefresh()
+" autocmd BufEnter * call NERDTreeRefresh()
 
 let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:SuperTabCrMapping                = 0
@@ -210,4 +209,3 @@ let g:netrw_preview=1
 "let g:tagbar_width = 60
 "" Open tagbar
 "nnoremap <leader>t :TagbarToggle<CR>
-
