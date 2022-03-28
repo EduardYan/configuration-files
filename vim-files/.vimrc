@@ -32,7 +32,7 @@ endif
 
 
 " Source files for plugins and mapping
-so ~/.vim/plugins.vim
+" so ~/.vim/plugins.vim
 so ~/.vim/maps.vim
 
 
@@ -59,6 +59,8 @@ Plug 'chriskempson/base16-vim'
 " Emmet for HMTL
 Plug 'mattn/emmet-vim'
 
+" Code comenter
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
