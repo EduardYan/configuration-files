@@ -1,0 +1,16 @@
+This file about information for remove the cache
+memory in Linux.
+
+Also configure cron for delete the cache automaticly.
+
+Execute for remove the cache:
+sync; echo 3 > /proc/sys/vm/drop_caches
+
+Configure cron:
+Edit the file of cron executing:
+crontab -e
+
+Write in the cron binary file:
+0 * * * * sync; echo 3 > /proc/sys/vm/drop_caches
+
+This line going to remove the cache during each hour.
