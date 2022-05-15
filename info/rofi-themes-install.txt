@@ -1,0 +1,4 @@
+These are some goods themes to set for rofi.
+
+For this repositorie execute the file "setup.sh"
+https://github.com/adi1090x/rofi/

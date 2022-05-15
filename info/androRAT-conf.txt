@@ -25,5 +25,8 @@ Normal Install
 sudo tar xvzf ~/Downloads/ngrok-stable-linux-amd64.tgz -C /usr/local/bin
 
 - Using Ngrock.
-Before of this execute -> $ ngrok authtoken <yourtoken> See the token in dashboard.ngrok.com/get-started/your-authtoken
+Before of this execute ->
+$ ngrok authtoken <yourtoken>
+
+See the token in dashboard.ngrok.com/get-started/your-authtoken
 ngrock tcp 4444 # to listen now and create a url in internet
