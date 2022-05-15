@@ -5,6 +5,7 @@ $ git clone https://github.com/vim/vim
 
 After of compile if you not have installed the lib ncurses you can compile also, first create a fake root and compile.
 $ cd ~ && mkdir usr/
+$ wget https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.3.tar.gz
 $ tar -xfv ncurses-6.3.tar.gz
 $ cd ncurses-6.3
 $ ./configure --prefix=$HOME/usr
