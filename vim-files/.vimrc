@@ -1,4 +1,4 @@
-"Others file of the configuration
+" Others file of the configuration
 
 set encoding=utf-8
 
@@ -62,28 +62,37 @@ Plug 'mattn/emmet-vim'
 " Code comenter
 Plug 'scrooloose/nerdcommenter'
 
+" Color Schemes
+Plug 'chriskempson/base16-vim'
+
+" Change cursor in Insert and Replace
+Plug 'wincent/terminus'
+
+
 call plug#end()
 
-" no vi compatible
+" No vi compatible
 set nocompatible
 
-" allow plugins by file type (rquire for plugins!)
+" Allow plugins by file type (rquire for plugins!)
 filetype plugin on
 filetype indent on
 
 set hidden
 
-" always show status bar
+" Always show status bar
 set ls=2
 
-" highlighted searh results
+" Highlighted searh results
 set hlsearch
 
-" para que no wrapee
+" No wrap to use
 set nowrap
 
-"set clipboard=unamedplus
+" Clipboard for the system
+set clipboard=unnamedplus
 
+" No swap file when editing
 set noswapfile
 
 set showcmd
@@ -118,16 +127,16 @@ syntax on
 
 "endif
 
-" tabs and spaces handling
+" Tabs and spaces handling
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
 
-" show
+" Show Numbers and Ruler
 set ruler
 set number
-set relativenumber
+" set relativenumber
 
 " show tabs , col and spaces
 "set list
@@ -135,22 +144,24 @@ set relativenumber
 " i don't know to use
 " set listchars=tab:*\ ,eol:~, trail:~-
 
-" show rule in column 100
+" Show rule in column 100
 set colorcolumn=100
 
-" how to split windows
+" How to split windows
 set splitbelow
 set splitright
 
 au VimResized *:wincmd = " resize split when windows are reduce
 
-" show cursor line
+" Show cursor line
 set mouse=a
 set cursorline
 
-" Para la busqueda de archivos
+" For best find files
 autocmd FileType netrw setl bufhidden=delete
 set path+=**
+
+" Best menu
 set wildmenu
 
 
@@ -164,17 +175,16 @@ augroup cline
 augroup END
 
 set background=dark
-" use 256 colors when possible
+colorscheme base16-tomorrow-night
+"colorscheme base16-apathy
 "colorscheme base16-harmonic-dark
 "colorscheme desert
 "colorscheme base16-atelier-seaside
-"este tema esta bien chivo
-colorscheme base16-apathy
 "colorscheme base16-oceanicnext
 "colorscheme base16-gruvbox-dark-hard
-"colorscheme base16-tomorrow-night
 "colorscheme base16-irblack
 
+" Use 256 colors when possible
 set t_Co=256
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -183,10 +193,10 @@ if exists('+termguicolors')
 
 endif
 
-" when scrolling, keep cursor 5 lines away from screen border
+" When scrolling, keep cursor 5 lines away from screen border
 set scrolloff=8
 
-" search
+" Search
 set incsearch " incremental search"
 set ignorecase
 set autoindent

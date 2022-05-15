@@ -24,6 +24,7 @@ Plug 'scrooloose/syntastic'
 
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Find files
 Plug 'ctrlpvim/ctrlp.vim'
 
 " Run test
