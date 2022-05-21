@@ -99,7 +99,7 @@ set showcmd
 set noerrorbells
 set updatetime=300
 
-" syntax highlight on
+" Syntax highlight on
 syntax on
 
 " swap, backup and undo file

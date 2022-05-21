@@ -15,5 +15,5 @@ set -g default-terminal "screen.xterm-256color"
 set -g default-terminal "tmux-256color"
 
 # Colors to use
-set -g status-bg "blue"
+set -g status-bg "red"
 set -g status-fg "black"

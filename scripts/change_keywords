@@ -1,5 +1,6 @@
 #!/bin/bash
-# this is a script for change the keywords for me
+# This is a script for change the keywords to
+# a custom keymap for use
 
 xmodmap -e "keycode 110=Up"
 xmodmap -e "keycode 115=Down"                                            

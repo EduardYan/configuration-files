@@ -1,22 +1,22 @@
-"This file have the maps for vim
+" This file have the maps for vim
 
 let mapleader=","
 
-" quit file
+" Quit file
 nnoremap <leader>q <esc>:q<cr>
 
-" go to normal mode amazing!!
+" Go to normal mode amazing!!
 inoremap kj <esc>l
 vnoremap as <esc>l
 
-" move between windows
+" Move between windows
 noremap <TAB><TAB> <C-w><C-w>
 
-" do nothing  when F1 is pressed
+" Do nothing  when F1 is pressed
 noremap <F1> <nop>
 inoremap <F1> <nop>
 
-" key mappings for save file
+" Key mappings for save file
 nnoremap <F2> <esc>:w!<CR>
 inoremap <F2> <esc>:w!<CR>
 vnoremap <F2> <esc>:w!<CR>
@@ -25,12 +25,12 @@ nnoremap <leader>s <esc>:w!<CR>
 vnoremap <leader>s <esc>:w!<CR>
 nnoremap <leader>f <esc>:w<CR>
 
-" tab navigation mappings
+" Tab navigation mappings
 nnoremap tn :tabn<CR>
 nnoremap tp :tabp<CR>
 nnoremap tt :$tabnew<CR>
 
-" move text lines and blocks
+" Move text lines and blocks
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 inoremap <C-j> <Esc>:m .+1<CR>==gi
@@ -38,35 +38,34 @@ inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
-" reselect text after indentation
+" Reselect text after indentation
 vnoremap < <gv
 vnoremap > >gv
 nnoremap > <c-w>>
 nnoremap < <c-w><
 
-" para que cuando busquemos y presionemos n para ver la otra busqueda
-" presione zz para que la linea donde esta la palabra la ponga en medio
+" For when you searching press n for see the other searched
+" and press zz for watch the line where is the word finded
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
-" clear search results
+" Clear search results
 nnoremap <silent><space> :nohl<CR>
 
-" select current line without indemtation 
+" Select current line without indemtation 
 nnoremap vv ^vg_
 
-" duplicated line
+" Duplicated line
 nnoremap dl :t.<CR>
 
-" remap up and down keys to navigate on warp lines
+" Remap up and down keys to navigate on warp lines
 nnoremap j gj
 nnoremap k gk
 
-" repear t/T/f/F searh easily
-" aki es la letra egne pero como mi teclado es Ingles jeje
+" Repear t/T/f/F searh easily
 nnoremap gn ;
 
-" disable arrow keys
+" Disable arrow keys
 "inoremap <up> <nop>
 "inoremap <down> <nop>
 "inoremap <left> <nop>
@@ -76,10 +75,10 @@ nnoremap gn ;
 "map <left> <nop>
 "map <right> <nop>
 
-" clear empty spaces at the end of lines on save of python files
+" Clear empty spaces at the end of lines on save of python files
 autocmd BufWritePre *.py :%s/\s\+$//e
 
-" autocomplete marchs
+" Autocomplete marchs
 "inoremap ' ''<Esc>i
 "inoremap " ""<Esc>i
 "inoremap ( ()<Esc>i
@@ -95,10 +94,10 @@ set completeopt=longest,menuone
 set completeopt-=preview
 set omnifunc=syntaxcomplete#Complete
 
-" this is for the portapapeles
+" Copy to the system clipboard when yank a text
 set clipboard=unnamedplus
 
-" this is for execute code for python
+" This is for execute code for python
 " Bind F5 to save file if modified and execute python script in a buffer.
 nnoremap <silent> <leader>w :call SaveAndExecutePython()<CR>
 
@@ -155,13 +154,13 @@ function! SaveAndExecutePython()
     setlocal nomodifiable
 endfunction
 
-" this is for execute a file .js with node
+" This is for execute a file .js with node
 nmap <leader>n :! node %
-map <F7> :q <CR>
+"nmap <F7> :q <CR>
 
 " For execute python code
-imap <leader>y <Esc>:w !python3<CR>
-map <leader>y :w !python3<CR>
+" inoremap <leader>y <Esc>:w !python3<CR>
+" nmap <leader>y :w !python3<CR>
 
 " NERDTree -------------------------------
 " toggle nertree display
@@ -183,6 +182,7 @@ map <leader>y :w !python3<CR>
 
 " autocmd BufEnter * call NERDTreeRefresh()
 
+" Maps and conf for tab plugin
 let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:SuperTabCrMapping                = 0
 let g:UltiSnipsExpandTrigger           = '<tab>'
@@ -201,11 +201,3 @@ let g:netrw_liststyle=3
 let g:netrw_winzise=0
 let g:netrw_preview=1
 
-"" Tagbar ------------------------------------
-"let g:tagbar_compat = 1
-"let g:tagbar_sort = 1
-"let g:tagbar_autoclose = 1
-"let g:tagbar_foldlevel = 0
-"let g:tagbar_width = 60
-"" Open tagbar
-"nnoremap <leader>t :TagbarToggle<CR>
