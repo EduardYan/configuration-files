@@ -1,0 +1,12 @@
+A guide for install ytfzf for watch videos from youtube
+in the terminal.
+
+Github Repositorie for more information.
+https://github.com/pystardust/ytfzf
+
+Install dependencies:
+$ sudo apt install jq curl fzf mpv yt-dlp dmenu chafa -y
+
+Now copy the binaries
+$ cd ytfzf
+$ sudo make install doc
