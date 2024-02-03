@@ -3,7 +3,7 @@
 ## Instalando paquetes principales 📦
 
 ```bash
-sudo pacman -S base-devel git vim xcb-util xcb-util-wm xcb-util-keysyms xcb-util-xinerama alsa-lib xcb-util-test xcb-util-shape lightdm lightdm-gtk-greeter
+sudo pacman -S base-devel git vim xcb-util xcb-util-wm xcb-util-keysyms alsa-lib lightdm lightdm-gtk-greeter
 ```
 
 ### Editar este archivito para que funcione lightdm
@@ -27,7 +27,7 @@ sudo systemctl enable lightdm.service
 ## Instalando bspwn y sxhkd y demás paquetes 📦
 
 ```bash
-sudo pacman -S bspwm sxhkd feh alacritty neofetch htop pcmanfm cmatrix xarchiver figlet firejail unrar zip unzip tmux
+sudo pacman -S bspwm sxhkd feh alacritty neofetch htop pcmanfm cmatrix xarchiver figlet firejail unrar zip unzip tmux vifm
 ```
 
 ```bash
@@ -53,7 +53,7 @@ cp sxhkdrc ~/.config/sxhkd
 vim ~/.config/sxhkd/sxhkdrc
 ```
 
-Ahora para nuestra configuración personalizada copiamos tanto el [bspwmrc](https://www.google.com) y el [sxhkdrc](https://www.google.com)
+Ahora para nuestra configuración personalizada copiamos tanto el [bspwmrc](https://github.com/EduardYan/configuration-files/blob/main/enviroment/bspwm/bspwmrc) y el [sxhkdrc](https://github.com/EduardYan/configuration-files/blob/main/enviroment/sxhkd/sxhkdrc)
 
 
 ### Creamos el archivo bspwm_resize:
@@ -123,7 +123,7 @@ sudo pacman -S rofi rofi-emoji xdotool
 mkdir ~/.config/rofi
 ```
 
-Copiar los [archivos](https://www.google.com) de configuración para rofi
+Copiar los [archivos](https://github.com/EduardYan/configuration-files/tree/main/enviroment/rofi) de configuración para rofi
 
 ### Apple font para rofi emoji
 
@@ -133,7 +133,7 @@ cd ttf-apple-emoji
 makepkg -si
 ```
 
-Luego copiamos este [archivo](https://www.google.com) de fuentes en ~/
+Luego copiamos este [archivo](https://github.com/EduardYan/configuration-files/blob/main/enviroment/fonts/fonts.conf) de fuentes en ~/
 
 
 ## Instalando zsh, oh my zsh, y power level 10k 📦
@@ -157,7 +157,7 @@ Para tener resaltado de syntaxis y demás ver el siguiente [artículo](https://g
 
 ## Colocando las fuentes para el sistema ✍️
 
-Descargar las siguientes [fuentes](www.google.com) y copiarlas
+Descargar las siguientes [fuentes](https://github.com/EduardYan/configuration-files/tree/main/enviroment/fonts) y copiarlas
 
 ```bash
 cd /usr/share/fonts
