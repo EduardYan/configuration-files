@@ -1,0 +1,19 @@
+Install the fluxgui for manage the brightness.
+
+More info go to the github.
+https://github.com/xflux-gui/fluxgui
+
+Dependencies.
+$ sudo apt-get install python3-pexpect python3-distutils gir1.2-ayatanaappindicator3-0.1 gir1.2-gtk-3.0 -y
+
+Installing.
+$ cd fluxgui
+$ ./download-xflux.py
+$ sudo ./setup.py install --record installed.txt
+
+
+Install the after command not is running because the themes scheme of glib execute:
+More info:
+https://askubuntu.com/questions/352502/glib-compile-schemas-not-found-while-trying-to-install-file-roller
+
+$ sudo apt-get update && sudo apt-get install libglib2.0-dev

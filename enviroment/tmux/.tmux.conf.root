@@ -1,0 +1,19 @@
+# Tmux configuration
+# ------------------
+
+# This is for the mouse
+set -g mouse on
+set -g mode-keys vi
+
+# Using tmux resurrect plugin
+# run-shell ~/tmux-resurrect/resurrect.tmux
+
+# For that the colors see good and working with vim
+set -g default-terminal "screen-256color" 
+set -g default-terminal "xterm-256color" 
+set -g default-terminal "screen.xterm-256color" 
+set -g default-terminal "tmux-256color"
+
+# Colors to use
+set -g status-bg "red"
+set -g status-fg "black"

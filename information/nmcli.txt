@@ -1,0 +1,5 @@
+sudo pacman -S networkmanager
+https://wiki.archlinux.org/title/NetworkManager
+
+nmcli device wifi connect network_name password my_password
+nmcli device disconnect ifname wlan0

@@ -1,0 +1,19 @@
+Build a binary of python file, using pyinstaller.
+
+
+PyInstaller Installation.
+
+$ pip3 install pyinstaller
+
+
+Use.
+
+Execute for more info
+$ pyinstaller --help
+
+Basic.
+$ pyinstaller myapp.py -n myAppNameBinary -F
+
+
+If your want add more data, that not is of the binary (in case of flask or django web apps).
+$ pyinstaller myapp.py -n myAppNameBinary -F --add-data /home/user/workspace/web-app/templates:templates/ /home/user/workspace/web-app/static:static/

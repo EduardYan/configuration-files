@@ -1,0 +1,4 @@
+#!/bin/bash
+# This is a script for change the brightness of the monitor in Linux
+
+xrandr --output LVDS1 --brightness 0.8

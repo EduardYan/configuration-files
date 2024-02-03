@@ -1,0 +1,40 @@
+How connect to wifi network from the terminal.
+
+1. Verify if the kernel detect your network board.
+
+$ lspci
+
+2. Verify if the kernel is using some driver for this network board.
+
+$ lspci -k
+
+If not the driver is used, then you must find the driver.
+
+3. See if the networks interfaces is on.
+
+$ ip link
+
+If bettween "<>" is the work UP, is meaning that the interface is up. For
+the case of wifi ussually must be wlan0 or eth1.
+
+4. Scan networks availables in the zone.
+
+$ iwlist INTERFACE_TO_CONNECT scan
+
+You must find the network to connect and know your ESSID and password.
+
+5. Generate the file for make the connection.
+
+$ wpa_passphrase "ESSID_OF_NETWORK" "PASSWORD_OF_NETWORK" > myred.conf
+
+6. Now make the supplicant.
+
+$ wpa_supplicant -B -D none -i INTERFACE_TO_CONNECT -c myred.conf
+
+In the -D option you pass a driver to use for make the supplicant, somebody drivers not running or not can make the supplicant, i recommended you, that your try with other options.
+
+Execute, "wpa_supplicant" for get more options of drivers to use.
+
+7. If the supplicant is working. Now we get the ip address using dhclient.
+
+$ dhclient -v INTERFACE_TO_CONNECT

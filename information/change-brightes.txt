@@ -1,0 +1,17 @@
+This is a small program for change the brightness of display of our computer.
+
+First we must know the display name.
+so we execute this:
+  xrandr --prop | grep " connected"
+
+
+Now we must know the brigthness of display that is used.
+  xrandr --prop --verbose | grep -A10 " connected" | grep "Brightness"
+Us return the value of brightness current used.
+
+
+Now we can change the brightness of display:
+  xrandr --output Display_of_name --brightness 0.8
+  xrandr --output LVDS1 --brightness 0.8
+
+  this is for change the brightness of display.

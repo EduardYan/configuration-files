@@ -1,0 +1,68 @@
+##################### Google search scraping #################
+Mariano Martinez
+"Mariano Martinez" -actor
+"Mariano martinez" -actor -television
+"feinmann" -periodista -"la nacion" "escritor"
+site:.gov.ar inurl:http
+site:*gov.ar inurl:wp-admin
+inurl:*ar intitle:"index of/documents"
+site:mail.* intitle:Dashboard
+site:*.gob.ar inurl:wp-admin
+intitle:"index of" "/mysql" site:.com.ar
+allintext:password filetype:log after:2018
+allintext:username filetype:env
+allintext:username filetype:log
+allintext:password filetype:env
+intitle:"index of" inurl:ftp after:2018
+intitle:"index of" inurl:http after:2018
+intitle:"index of" inurl:http site:.ar after:2018
+filetype:env "DB_PASSWORD" after:2018
+filetype:xls inurl:"emails.xls"
+site:gov.* intitle:"index of" *.apk
+db_password filetype:env
+site:rentry.co intext:"password"
+inurl:top.htm inurl:currenttime
+inurl:"lvappl.htm"
+intitle:"webcamXP 5"
+intitle:"report"("qualys" | "acunetix" | "nessus" | "netsparker" |"nmap" ) filetype:pdf
+intext:"Real-time IP Camera Monitoring System" intext:"ActiveX Mode (For IE Browser)"
+inurl:*gov.ar intitle:"index of/documents"
+inurl:http intitle:"index of/documents"
+inurl:https intitle:"index of/documents"
+inurl:http intitle:"index of/documents" site:*gob.ar
+inurl:*gov.ar intitle:"index of/documents"
+site:*.gov.ar inurl:wp-admin
+site:*.ar inurl:wp-admin
+site:.gov.ar inurl:wp-admin
+intitle:"index of" "/mysql"
+allintext:password filetype:log after:2019 "leaks"
+allintext:"password leak" filetype:log after:2019
+allintext:password filetype:log after:2017
+allintext:password leak filetype:log after:2017
+intext:password filetype:log after:2018
+intext:password filetype:log after:2018 "leak"
+intext:password leak filetype:log after:2018
+intitle:"index of" inurl:ftp after:2018
+intitle:"index of" inurl:http site:.ar after:2018
+site:.tv inurl:http
+intitle:"WAMPSERVER Homepage" "Server configuration" "Apache version"
+cache:tdtlatinoamerica.com.ar
+
+
+
+
+######################### Pagodo tool ###############################
+git clone https://github.com/opsdisk/pagodo.git
+python3 -m pip install -r requirements.txt
+python3 ghdb_scraper.py -i
+
+
+python3 pagodo.py -d tdtlatinoamerica.com.ar -g dorks/files_containing_passwords.dorks -s -i 50
+
+python3 pagodo.py -d .gov.ar -g dorks/files_containing_juicy_info.dorks -s -i 50
+
+python3 pagodo.py -d .gov.ar -g dorks/pages_containing_login_portals.dorks -s -i 50
+
+python3 pagodo.py -d amazon.com -g dorks/files_containing_juicy_info.dorks -s -i 50
+
+python3 pagodo.py -d .gob.ar -g dorks/sensitive_directories.dorks -s -i 50 

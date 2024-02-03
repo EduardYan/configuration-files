@@ -1,0 +1,2 @@
+sudo fdisk -l
+udisksctl mount -b /dev/sda1

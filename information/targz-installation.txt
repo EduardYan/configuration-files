@@ -1,0 +1,20 @@
+This file have the information about how we can install programs or packages in .tar.gz format.
+------------------------------------------------------------------------------------------------
+
+Download the desired .tar.gz or (.tar.bz2) file
+Open Terminal
+
+Extract the .tar.gz or (.tar.bz2) file with the following commands
+
+tar xvzf PACKAGENAME.tar.gz
+tar xvjf PACKAGENAME.tar.bz2   (this is diferent for the extension)
+
+Navigate to the extracted folder using cd command
+cd PACKAGENAME
+
+Now run the following command to install the tarball
+./configure
+
+make
+
+sudo make install

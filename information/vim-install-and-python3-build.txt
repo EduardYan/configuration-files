@@ -1,0 +1,28 @@
+Vim installation and build with python3.
+
+Fist clone the last version for vim
+$ git clone https://github.com/vim/vim
+
+After of compile if you not have installed the lib ncurses you can compile also, first create a fake root and compile.
+$ cd ~ && mkdir usr/
+$ wget https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.3.tar.gz
+$ tar -xfv ncurses-6.3.tar.gz
+$ cd ncurses-6.3
+$ ./configure --prefix=$HOME/usr
+$ make
+$ sudo make install
+
+Now you have installed ncurses in the fake root, dependencie for build vim.
+
+The follow step is resolve the dependencies for compile with python3 support.
+$ sudo apt install python3-dev python3-distutils musl-dev build-essential linux-headers -y
+
+After to clone vim code, execute:
+$ cd vim/src
+$ LDFLAGS=-L$HOME/usr/lib ./configure --prefix=/usr --enable-python3interp --with-python3-config-dir=/usr/lib/python3.9/config-3.9-i386-linux-gnu
+$ make
+$ sudo make install
+
+
+And already vim is compile with python3 support, verify using:
+$ vim --version | grep +python3

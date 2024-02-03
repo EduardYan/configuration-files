@@ -1,0 +1,12 @@
+This is the form of install metasploitable
+in Linux Debian.
+
+sudo apt install ruby ruby-dev build-essential zlib1g zlib1g-dev libpq-dev libpcap-dev libsqlite3-dev postgresql -y
+
+git clone https://github.com/rapid7/metasploit-framework
+
+sudo gem install bundler
+
+cd metasploit-framework
+
+sudo bundle install

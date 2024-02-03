@@ -1,0 +1,5 @@
+#!/bin/bash
+# This file is for execute the setup of development in Linux
+
+source ~/scripts/change_keywords
+source ~/scripts/change_brightness

@@ -1,0 +1,4 @@
+#!/bin/bash
+# This is a script for see the keymap of the our keyboard
+
+xmodmap -pk

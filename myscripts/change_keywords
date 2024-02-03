@@ -1,0 +1,15 @@
+#!/bin/bash
+# This is a script for change the keywords to
+# a custom keymap for use
+
+xmodmap -e "keycode 110=Up"
+xmodmap -e "keycode 115=Down"                                            
+xmodmap -e "keycode 119=Left"
+xmodmap -e "keycode 117=Right"    
+xmodmap -e "keycode 118=BackSpace"
+xmodmap -e "keycode 118=Return"
+xmodmap -e "keycode 107=bracketleft"
+xmodmap -e "keycode 78=braceleft"
+xmodmap -e "keycode 127=parenleft"
+xmodmap -e "keycode 134=Return"
+xmodmap -e "keycode 135=BackSpace"

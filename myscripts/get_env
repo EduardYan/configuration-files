@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Script for get the development enviroment in debian deviravates
+# distros
+# Made for EduardYan
+
+
+# Dependencies
+sudo apt update && sudo apt upgrade -y \
+      && sudo apt install g++ gcc make cmake musl-dev build-essential python3-dev python3-venv python3-distutils linux-headers \
+      default-jre default-jdk sqlite3 postgresql binutils wget curl python3-pexpect gir1.2-ayatanaappindicator3-0.1 gir1.2-gtk-3.0 bzip2 rar unrar git tmux \
+      simplescreenrecorder mpv vlc lxterminal xarchiver leafpad pulseaudio deepin-icon-theme lxappearance w3m jq fzf mpv yt-dlp dmenu -y \
+      && pip3 install --upgrade pip && pip3 install env rich requests flask flask_sqlalchemy bcrypt \

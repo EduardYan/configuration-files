@@ -1,0 +1,8 @@
+This is the form for delete
+a broken packages, this form use
+the dpkg program
+
+
+$ sudo mv /var/lib/dpkg/info/pulseeffects.* /tmp/
+$ sudo dpkg --remove --force-remove-reinstreq pulseeffects
+$ sudo apt autoremove

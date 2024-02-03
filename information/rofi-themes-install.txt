@@ -1,0 +1,10 @@
+These are some goods themes to set for rofi.
+
+For this repositorie execute the file "setup.sh"
+https://github.com/adi1090x/rofi/
+
+After of execute the file "setup.sh", you' are going to
+choice the icons resolution, recomended for me is 1080p.
+
+Now you can copy the themes for rofi of $HOME/rofi/1080p/launchers/ to /usr/share/rofi/themes
+for get the themes and choice.
