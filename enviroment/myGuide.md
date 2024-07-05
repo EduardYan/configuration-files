@@ -152,6 +152,8 @@ chsh -s $(which zsh) # ❌ a veces falla
 chsh -s /bin/zsh
 ```
 
+[Instalar syntax highlighting](https://linuxhandbook.com/zsh-syntax-highlighting/)
+
 Para tener resaltado de syntaxis y demás ver el siguiente [artículo](https://gist.github.com/minhanhhere/4a124522b2931dd47fa0aed56ad9843e)
 
 
