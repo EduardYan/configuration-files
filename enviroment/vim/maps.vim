@@ -201,3 +201,4 @@ let g:netrw_liststyle=3
 let g:netrw_winzise=0
 let g:netrw_preview=1
 
+nnoremap <leader>e :Lexplore<CR>

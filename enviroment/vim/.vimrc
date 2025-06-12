@@ -35,10 +35,7 @@ endif
 " so ~/.vim/plugins.vim
 so ~/.vim/maps.vim
 
-
 call plug#begin()
-
-
 " Autocompletacion
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 
@@ -87,7 +84,7 @@ set ls=2
 set hlsearch
 
 " No wrap to use
-set nowrap
+set wrap
 
 " Clipboard for the system
 set clipboard=unnamedplus
@@ -175,14 +172,16 @@ augroup cline
 augroup END
 
 set background=dark
-colorscheme base16-tomorrow-night
+"colorscheme base16-tomorrow-night
 "colorscheme base16-apathy
 "colorscheme base16-harmonic-dark
 "colorscheme desert
 "colorscheme base16-atelier-seaside
 "colorscheme base16-oceanicnext
 "colorscheme base16-gruvbox-dark-hard
+"colorscheme base16-monaki
 "colorscheme base16-irblack
+colorscheme base16-monokai
 
 " Use 256 colors when possible
 set t_Co=256
@@ -190,7 +189,6 @@ if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
-
 endif
 
 " When scrolling, keep cursor 5 lines away from screen border
@@ -201,3 +199,4 @@ set incsearch " incremental search"
 set ignorecase
 set autoindent
 set smartcase
+

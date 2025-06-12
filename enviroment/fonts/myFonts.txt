@@ -1,0 +1,10 @@
+My Favorites Fonts
+
+Cascadia Code
+https://github.com/microsoft/cascadia-code
+
+Nerd Fonts
+https://www.nerdfonts.com/
+
+Apple Emoji
+https://github.com/zhdsmy/apple-emoji
