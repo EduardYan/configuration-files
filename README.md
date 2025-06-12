@@ -1,5 +1,4 @@
-# Configurations Files ![logo-settings](./docs/logo.png)
-
+# Configurations Files ![logo-settings](./documentation/logo.png)
 
 <p>This are some files of configuration for work in Linux ⚙️🐧</p>
 
